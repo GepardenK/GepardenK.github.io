@@ -10,19 +10,23 @@
     
 	<!-- Question -->
 	<h2 id="spm">Hva er hovedstaden i Norge?</h2>
-	<p id="feedback"> Velg et alternativ </p>
+	<p id="feedback"> Velg et alternativ: </p>
 	
 	<!-- Buttons -->
-    <h3 id="button1" onclick="checkAnswer(1, false)">Tønsberg</h3>
-	<h3 id="button2" onclick="checkAnswer(2, false)">Kongsberg</h3>
-	<h3 id="button3" onclick="checkAnswer(3, true)">Oslo</h3>
-	<h3 id="button4" onclick="checkAnswer(4, false)">Trondheim</h3>
+    <h3 id="button1" onclick="giveFeedback( this.id, false )"> Tønsberg  </h3>
+	<h3 id="button2" onclick="giveFeedback( this.id, false )"> Kongsberg </h3>
+	<h3 id="button3" onclick="giveFeedback( this.id, true  )"> Oslo      </h3>
+	<h3 id="button4" onclick="giveFeedback( this.id, false )"> Trondheim </h3>
 	
-
     <script>
 	
-        function checkAnswer(button, answer) {
+        function giveFeedback( button_id , is_correct ) {
            
+		   var text = "Du valgte feil";
+		   if ( is_correct ) { text = "Riktig svar!!!"; }
+		   
+		   document.getElementById( button_id ).innerHTML = text;
+		   		   
         }
 		
     </script>
