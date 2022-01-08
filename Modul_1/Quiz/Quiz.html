@@ -7,13 +7,24 @@
 </head>
 <body>
     <p>Ferdighet 2 - Onclick => Kjøre funksjon som endrer innerHTML til element ut fra Id</p>
-    <h2 id="aaa">AAAAAAAAAAAAAAAA</h2>
-    <h2 onclick="doSomething()">BBBBBBBBBBBBBBBB</h2>
+    
+	<!-- Question -->
+	<h2 id="spm">Hva er hovedstaden i Norge?</h2>
+	<p id="feedback"> Velg et alternativ </p>
+	
+	<!-- Buttons -->
+    <h3 id="button1" onclick="checkAnswer(1, false)">Tønsberg</h3>
+	<h3 id="button2" onclick="checkAnswer(2, false)">Kongsberg</h3>
+	<h3 id="button3" onclick="checkAnswer(3, true)">Oslo</h3>
+	<h3 id="button4" onclick="checkAnswer(4, false)">Trondheim</h3>
+	
 
     <script>
-        function doSomething() {
-            document.getElementById('aaa').innerHTML = 'CCCCCCCCCCCCCCCC';
+	
+        function checkAnswer(button, answer) {
+           
         }
+		
     </script>
 </body>
 </html>
