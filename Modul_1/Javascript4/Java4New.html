@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml%22%3E
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <button onclick="buttonKlick(this)">1</button>
+    <button onclick="buttonKlick(this)">2</button>
+    <button onclick="buttonKlick(this)">3</button>
+    <br>
+    <button onclick="buttonKlick(this)">4</button>
+    <button onclick="buttonKlick(this)">5</button>
+    <button onclick="buttonKlick(this)">6</button>
+    <br>
+    <button onclick="buttonKlick(this)">7</button>
+    <button onclick="buttonKlick(this)">8</button>
+    <button onclick="buttonKlick(this)">9</button>
+    <p id="info"></p>
+
+    <script>
+        function buttonKlick(button) {
+            console.log(button.innerText);
+            document.getElementById("info").innerHTML += button.innerText + " ";
+        }
+    </script>
+</body>
+
+</html>
