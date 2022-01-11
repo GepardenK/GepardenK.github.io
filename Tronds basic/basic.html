@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>Title of html document</title>
-	</head>
-	
-	<body>
-		
-		<h1 id="topsecret"> Hello World! </h1>
-        <p  id="Trond1" onmouseover="hentPerson('Trond1', 'plathe', '113', 'sexuellt tilfreds')" > Trond Eirik </p>
-		<p  id="Vincent1" onmouseover="hentPerson('Vincent1', stuestol, '112', sexuellt frustert)" >Vincent Stuestol</p>
-		
-		<script>
-			
-			function hentPerson(identity, etternavn, telefonnummer, personlighet) {
-			
-				document.getElementById(identity).innerHTML+="er en trussel mot rikets sikkerhet";
-			
-			}
-			
-		</script>
-		
-	</body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Title of html document</title>
+</head>
+
+<body>
+
+    <!-- html elementer -->
+    <h2 id="Kronidiot1" onclick="showBio('Karl Gustaf', 'Schmitt', 'Holmenkollen', 'arkitekt', '3317', this)">Karl
+        Gustaf Schmitt
+    </h2>
+    <h2 id="Kronidiot2" onclick="showBio('Bernt Elling', 'Jonsrud', 'Moss', 'konsulent', '7331', this)">Bernt Elling
+        Jonsrud</h2>
+    <h2 id="Kronidiot3" onclick="showBio('Leif Kåre', 'Gerdsen', 'Tjølstrup', 'politiker', '1337', this)">Leif Kåre
+        Gerdsen</h2>
+    <p id="Kronidiot4"></p>
+
+    <script>
+        // javascript
+        function showBio(navn, etternavn, bosted, stilling, tlf, html_element) {
+            
+			html_element.innerHTML = navn + ", " + etternavn + ", " + bosted + ", " + stilling + ", " + tlf;
+
+        }
+    </script>
+
+</body>
+
 </html>
 

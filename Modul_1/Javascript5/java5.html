@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml%22%3E
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body onload="doClick()">
+    <!-- <p>Ferdighet 5 - Kode som kjøres når siden lastes vs kode i en funksjon</p> -->
+    <button onclick="doClick()">Trykk her</button>
+	<p id='time'></p>
+	<img src="http://www.hologardstun.com/wp-content/uploads/2018/02/Sognefjorden-2000x819.jpg" alt="W3Schools.com">
+	
+    Prøv også å reloade siden.
+
+    <script>
+        alert( new Date().toTimeString() );
+
+        function doClick() {
+
+            document.getElementById('time').innerHTML += '' + new Date().toTimeString() + "</br>";
+        }
+    </script>
+</body>
+
+</html>
+
