@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Title of html document</title>
+</head>
+
+<body>
+
+    <!-- html elementer -->
+    <div id="random"></div>
+    <div id="text">Her kommer tekst </div>
+
+
+    <script>
+        //javascript
+        var square = document.getElementById('random');
+        var formel_width = 10 + Math.floor(Math.random() * 200);
+        var formel_height = 10 + Math.floor(Math.random() * 200);
+        var formel_border = 10 + Math.floor(Math.random() * 200);
+        var text = document.getElementById('text')
+        text.innerHTML = "width: " + formel_width + " height: " + formel_height + "border: " + formel_border;
+
+        square.innerHTML = "<div id='random' style='background-color:blue; width:"
+            + formel_width + "px; height:"
+            + formel_height + "px; border:"
+            + formel_border + "px solid red;'></div>";
+    </script>
+
+</body>
+
+</html>

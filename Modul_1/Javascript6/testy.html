@@ -1,10 +1,13 @@
+Vinny.S — Today at 11:02 PM
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml%22%3E
+
 <head>
     <meta charset="utf-8" />
     <title></title>
 </head>
+
 <body>
     <p>Ferdighet 6 - Sette sammen tekst av flere deler og bruke dette til å bygge HTML dynamisk</p>
 
@@ -15,10 +18,10 @@
         <option selected value="green">Green color</option>
         <option value="blue">Blue color</option>
     </select>
-	<select id="frameChooser" onchange="showDiv()">
-        <option value="grey">Grey frame</option>
+    <select id="frameChooser" onchange="showDiv()">
+        <option value="gray">Gray frame</option>
         <option selected value="black">Black frame</option>
-        <option value="none">No frame</option>
+        <option value="#ffffff00">No frame</option>
     </select>
     <div id="resultat"></div>
     <div id="resultatHtml" style="font-family: monospace"></div>
@@ -28,22 +31,22 @@
         var sizeSlider = document.getElementById('sizeSlider');
         var textInput = document.getElementById('textInput');
         var colorChooser = document.getElementById('colorChooser');
-		var frameChooser = document.getElementById('frameChooser');
+        var frameChooser = document.getElementById('frameChooser');
 
         showDiv();
-		
+
         function showDiv() {
             resultatDiv.innerHTML = '<div style="'
-                + 'background-color: ' + colorChooser.value + ';'
-				+ 'border: solid 5px;'
-				+ 'border-color: ' + frameChooser.value + ';'
+                + 'background-color:' + colorChooser.value + ';'
+                + 'border: solid 5px;'
+                + 'border-color:' + frameChooser.value + ';'
                 + 'width: ' + sizeSlider.value + 'px;'
                 + 'height: ' + sizeSlider.value + 'px;'
-                + '">' +
-                textInput.value + '</div>';
+                + '">' + textInput.value
+                + '</div >';
             resultatHtmlDiv.innerText = resultatDiv.innerHTML;
         }
-		
     </script>
 </body>
+
 </html>

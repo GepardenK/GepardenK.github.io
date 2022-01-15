@@ -7,27 +7,28 @@
 </head>
 
 <body>
-
-    <!-- html elementer -->
-    <h2 id="Kronidiot1" onclick="showBio('Karl Gustaf', 'Schmitt', 'Holmenkollen', 'arkitekt', '3317', this)">Karl
-        Gustaf Schmitt
-    </h2>
-    <h2 id="Kronidiot2" onclick="showBio('Bernt Elling', 'Jonsrud', 'Moss', 'konsulent', '7331', this)">Bernt Elling
-        Jonsrud</h2>
-    <h2 id="Kronidiot3" onclick="showBio('Leif Kåre', 'Gerdsen', 'Tjølstrup', 'politiker', '1337', this)">Leif Kåre
-        Gerdsen</h2>
-    <p id="Kronidiot4"></p>
-
+	
+	<div id="random"> </div>
+	<div id="tekst" > Her kommer tekst</div>
+	
     <script>
-        // javascript
-        function showBio(navn, etternavn, bosted, stilling, tlf, html_element) {
-            
-			html_element.innerHTML = navn + ", " + etternavn + ", " + bosted + ", " + stilling + ", " + tlf;
-
-        }
+		
+		var square = document.getElementById('random');	
+		var tekst = document.getElementById('tekst');
+		
+		var formel_width =  10 + Math.floor(Math.random() * 200);
+		var formel_height = 10 + Math.floor(Math.random() * 200);
+		var formel_border = 10 + Math.floor(Math.random() * 20);
+		
+		square.innerHTML = "<div id='random' style='background-color:blue; width:" 
+		+ formel_width + "px; height:" 
+		+ formel_height + "px; border:" 
+		+ formel_border + "px solid red;' ></div>";
+		
+		tekst.innerHTML = "Width: " + formel_width + "<br>Height: " + formel_height + "</br>Border: " + formel_border;
+		
     </script>
 
 </body>
 
 </html>
-
