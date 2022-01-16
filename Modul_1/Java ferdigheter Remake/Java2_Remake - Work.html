@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml%22%3E
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="funksjon_1('heihei')">
+
+	<p onmouseout="funksjon_1()"> Dette er en paragraf</p>
+    
+    <script>
+        
+		var tall = 0;
+		funksjon_1('Vincent er en bedriten skilpadde');
+		funksjon_1('Trond er kongen av verden');
+		funksjon_1('Trond er en løk');
+		funksjon_2();
+		funksjon_1('Dette er fjerde gang vi kjører funksjonen');
+		funksjon_1('Jaja det var det');
+		
+		
+		function funksjon_1(tekst) {
+			
+			tall++;
+			
+			console.log(tekst + ' (' + tall + ')');
+		
+		}
+		
+		function funksjon_2() {
+		
+			console.log( 'NÅ KJØRER FUNKSJON 2' );
+			
+		}
+		
+    </script>
+	
+</body>
+</html>
