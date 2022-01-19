@@ -8,24 +8,20 @@
 
 <body>
 	
-	<div id="random"> </div>
-	<div id="tekst" > Her kommer tekst</div>
+	<p id="compleks"> </p>
 	
     <script>
 		
-		var square = document.getElementById('random');	
-		var tekst = document.getElementById('tekst');
+	var paragraf = document.getElementById('compleks');	
+	paragraf.innerHTML = calculator(100,50);
+
+	
+	function calculator(tall1, tall2) {
+	
+		var svar = tall1 + tall2;
+		return svar;
 		
-		var formel_width =  10 + Math.floor(Math.random() * 200);
-		var formel_height = 10 + Math.floor(Math.random() * 200);
-		var formel_border = 10 + Math.floor(Math.random() * 20);
-		
-		square.innerHTML = "<div id='random' style='background-color:blue; width:" 
-		+ formel_width + "px; height:" 
-		+ formel_height + "px; border:" 
-		+ formel_border + "px solid red;' ></div>";
-		
-		tekst.innerHTML = "Width: " + formel_width + "<br>Height: " + formel_height + "</br>Border: " + formel_border;
+	}
 		
     </script>
 
